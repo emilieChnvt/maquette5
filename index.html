@@ -27,11 +27,11 @@
         <h3>Secure Sign in</h3>
         <div class="d-flex flex-column mt-4">
           <label for="username" class="fw-bold pb-2">Username</label>
-          <input id="username" type="text"  class="border border-secondary-subtle rounded-1 py-2 ps-3 " placeholder="anna_admin">
+          <input id="username" type="text"  class="border border-secondary-subtle rounded-1 py-2 ps-3 me-2" placeholder="anna_admin">
         </div>
         <div class="d-flex flex-column mt-4">
           <label for="password" class="fw-bold pb-2">Password</label>
-          <input id="password" type="password"  class="border border-secondary-subtle rounded-1 py-2 ps-3" placeholder='••••••••' required>
+          <input id="password" type="password"  class="border border-secondary-subtle rounded-1 py-2 ps-3 me-2" placeholder='••••••••' required>
         </div>
         <button type="submit" class="btn d-flex align-items-center rounded-1 bg-dark text-white mt-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right me-2" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
@@ -39,44 +39,46 @@
         </svg>Sign in</button>
       </form>
     </div>
-    <div class="col-5 border px-2">
+    <div class="col-5 p-0 ">
       <h3>Try either of the following user</h3>
-      <div class="row mt-5 border-bottom">
-        <div class="col-3">
-          <h5>Username</h5>
+      <div class="border mt-5 ">
+        <div class="row mx-0 border-bottom ">
+          <div class="col-3 border-end">
+            <h5 class="py-2">Username</h5>
+          </div>
+          <div class="col-3 border-end">
+            <h5 class="py-2">Password</h5>
+          </div>
+          <div class="col-6">
+            <h5 class="py-2">Role</h5>
+          </div>
         </div>
-        <div class="col-3">
-          <h5>Password</h5>
+        <div class="row border-bottom mx-0 bg-secondary bg-opacity-10 py-2 text-start align-items-center">
+          <div class="col-3 border-end">
+            <h6 class="py-2">John_user</h6>
+          </div>
+          <div class="col-3 border-end">
+            <h6 class="py-2">Kitten</h6>
+          </div>
+          <div class="col-5">
+            <h6 class="py-2">ROLE_USER (regular user)</h6>
+          </div>
         </div>
-        <div class="col-6">
-          <h5>Role</h5>
-        </div>
-      </div>
-      <div class="row py-2 bg-secondary bg-opacity-10 border-bottom">
-        <div class="col-3">
-          <h6>John_user</h6>
-        </div>
-        <div class="col-3">
-          <h6>Kitten</h6>
-        </div>
-        <div class="col-6">
-          <h6>ROLE_USER (regular user)</h6>
-        </div>
-      </div>
 
-      <div class="row py-2">
-        <div class="col-3">
-          <h6>anna_admin</h6>
-        </div>
-        <div class="col-3">
-          <h6>Kitten</h6>
-        </div>
-        <div class="col-6">
-          <h6>ROLE_ADMIN (administrator)</h6>
+        <div class="row  mx-0 ">
+          <div class="col-3 border-end">
+            <h6 class="py-2">anna_admin</h6>
+          </div>
+          <div class="col-3 border-end">
+            <h6 class="py-2">Kitten</h6>
+          </div>
+          <div class="col-5">
+            <h6 class="py-2">ROLE_ADMIN (administrator)</h6>
+          </div>
         </div>
       </div>
     </div>
-      <div class="col-3">
+      <div class="col-3 px-0">
         <div class="bg-secondary bg-opacity-25 rounded d-flex flex-column  p-3">
           <p>This is a <b>demo application</b> built in the Symfony Framework to illustrate the recommended way of developing Symfony
             applications.</p>
