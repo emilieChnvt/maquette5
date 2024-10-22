@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-  <nav class="navbar navbar-expand-lg bg-dark px-5">
+<div class="container ">
+  <nav class="navbar navbar-expand-lg bg-dark px-3 ">
     <div class="container-fluid ">
       <a class="navbar-brand d-flex align-items-center text-white" href="#">
         <span class="ps-2">Symfony Demo Application</span>
@@ -22,9 +22,14 @@
     </div>
   </nav>
   <div class="row pt-5 gap-3 d-flex justify-content-center ">
-    <div class="col-3 bg-secondary  bg-opacity-25 rounded-1 p-3">
-      <form action="" >
-        <h3>Secure Sign in</h3>
+    <div class="col-3 p-0">
+      <form action="" class="bg-secondary bg-opacity-25  rounded-1 p-3">
+        <div class="d-flex align-items-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill me-2 " viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+          </svg>
+          <h3 class="mt-2">Secure Sign in</h3>
+        </div>
         <div class="d-flex flex-column mt-4">
           <label for="username" class="fw-bold pb-2">Username</label>
           <input id="username" type="text"  class="border border-secondary-subtle rounded-1 py-2 ps-3 me-2" placeholder="anna_admin">
@@ -40,58 +45,78 @@
       </form>
     </div>
     <div class="col-5 p-0 ">
-      <h3>Try either of the following user</h3>
-      <div class="border mt-5 ">
+
+      <div class="pt-4">
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left me-3" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>Try either of the following user</h3>
+      </div>
+      <div class="border  ">
         <div class="row mx-0 border-bottom ">
           <div class="col-3 border-end">
-            <h5 class="py-2">Username</h5>
+            <h6 class="py-1">Username</h6>
           </div>
           <div class="col-3 border-end">
-            <h5 class="py-2">Password</h5>
+            <h6 class="py-1">Password</h6>
           </div>
           <div class="col-6">
-            <h5 class="py-2">Role</h5>
+            <h6 class="py-1">Role</h6>
           </div>
         </div>
         <div class="row border-bottom mx-0 bg-secondary bg-opacity-10 py-2 text-start align-items-center">
           <div class="col-3 border-end">
-            <h6 class="py-2">John_user</h6>
+            <span class="py-1">john_user</span>
           </div>
           <div class="col-3 border-end">
-            <h6 class="py-2">Kitten</h6>
+            <span class="py-1">Kitten</span>
           </div>
-          <div class="col-5">
-            <h6 class="py-2">ROLE_USER (regular user)</h6>
+          <div class="col-6">
+            <span class="py-1">ROLE_USER (regular user)</span>
           </div>
         </div>
 
-        <div class="row  mx-0 ">
+        <div class="row  mx-0   py-2 text-start align-items-center">
           <div class="col-3 border-end">
-            <h6 class="py-2">anna_admin</h6>
+            <span class="py-1">anna_admin</span>
           </div>
           <div class="col-3 border-end">
-            <h6 class="py-2">Kitten</h6>
+            <span class="py-1">Kitten</span>
           </div>
-          <div class="col-5">
-            <h6 class="py-2">ROLE_ADMIN (administrator)</h6>
+          <div class="col-6">
+            <span class="py-1">ROLE_ADMIN ( administrator)</span>
           </div>
+        </div>
+      </div>
+      <div class="border rounded-1 mt-3 p-3">
+        <div>
+          <span><span class="badge text-bg-success">NOTE</span> If these users don't work, reload application fixtures by
+            running this command from the terminal: </span>
+
+          <input id="fixtures" type="text" placeholder="$ php app/console doctrine: fixtures: load" class="w-100 bg-secondary bg-opacity-10 rounded-1 py-3 ps-2 border-0 ">
+          <label for="fixtures"></label>
+        </div>
+        <div>
+          <span><span class="badge text-bg-success">TIP</span> If you want to create new users, run this other command:</span>
+          <input id="users" type="text" placeholder="$ php app/console doctrine: fixtures: load" class="w-100 bg-secondary bg-opacity-10 rounded-1 py-3 ps-2 border-0 ">
+          <label for="users"></label>
         </div>
       </div>
     </div>
       <div class="col-3 px-0">
-        <div class="bg-secondary bg-opacity-25 rounded d-flex flex-column  p-3">
+        <div class="bg-secondary bg-opacity-25 rounded d-flex flex-column  p-4">
           <p>This is a <b>demo application</b> built in the Symfony Framework to illustrate the recommended way of developing Symfony
             applications.</p>
           <p>For more information, check out
             the <span class="text-success   text-opacity-75">Symfony Documentation.</span></p>
         </div>
-        <p class="mt-3">Click on this button to show the source code of the <b>Controller</b> and <b>template</b>
+        <p class="my-4">Click on this button to show the source code of the <b>Controller</b> and <b>template</b>
           used to render this page.</p>
         <button class="bg-secondary d-flex align-items-center justify-content-center p-2 text-white bg-opacity-75 text-white fw-bold fs-5 w-100 border-0 rounded py-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill me-2" viewBox="0 0 16 16">
             <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
           </svg>Show code source</button>
       </div>
+
 
   </div>
 </div>
